@@ -1,0 +1,159 @@
+body {
+  box-sizing: border-box;
+  padding: 12px;
+  min-height: 100vh;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #363642;
+}
+
+.label {
+  border-radius: 8px;
+  padding: 12px 24px;
+  width: min(90%, 500px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  font-size: 1.5rem;
+
+  background-color: aquamarine;
+}
+
+.label__tooltip-i {
+  display: inline-block;
+  padding: 5px;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  line-height: 1.5;
+
+  background-color: #fff;
+}
+
+.label__tooltip-i:hover,
+.label__tooltip-i:focus-visible {
+  background-color: lightcoral;
+  outline: auto;
+}
+
+.label__text {
+  text-align: center;
+}
+
+/* === */
+
+.tooltip-toggle {
+  cursor: pointer;
+  position: relative;
+}
+
+/* Tooltip text container */
+.tooltip-toggle::before {
+  content: attr(data-tooltip-text);
+  width: 160px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 12px));
+  background-color: #2b222a;
+  border-radius: 4px;
+  color: white;
+  padding: 0.6rem;
+  transition: all 0.5s ease;
+}
+
+/* Tooltip arrow */
+.tooltip-toggle::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #2b222a;
+}
+
+/* Setting up the transition */
+.tooltip-toggle::before,
+.tooltip-toggle::after {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Triggering the transition */
+.tooltip-toggle:focus::before,
+.tooltip-toggle:focus::after,
+.tooltip-toggle:hover::before,
+.tooltip-toggle:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.75s ease;
+}
+
+/* Password tooltip */
+
+.pass {
+  position: relative;
+}
+
+.pass__label {
+  width: fit-content;
+  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.pass__tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in 1s, visibility 0.5s ease-in 1s;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 12px);
+  max-width: 100%;
+  border-radius: 4px;
+  padding: 0.6rem;
+  color: white;
+  background-color: #2b222a;
+  font-size: 1.2rem;
+}
+
+/* Tooltip arrow */
+.pass__tooltip::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 10%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #2b222a;
+}
+
+.pass__tooltip ul[title]::before {
+  content: attr(title);
+  display: block;
+  font-weight: bold;
+  padding: 4px;
+}
+
+.pass__tooltip_hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s, visibility 0.4s;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog</title>
+
+    <link rel="stylesheet" href="./dislog.css" />
+    <script src="./dialog.js" defer></script>
+  </head>
+  <body>
+    <button id="modal-btn">Open modal</button>
+    <button id="pop-up-btn">Open pop-up</button>
+
+    <dialog
+      id="modal"
+      aria-labelledby="modal-title"
+      aria-describedby="modal-content"
+    >
+      <h2 id="modal-title">Modal window</h2>
+      <p id="modal-content">This is a modal window.</p>
+      <button class="close-btn" aria-label="Close modal">Close JS</button>
+
+      <form method="dialog">
+        <button aria-label="Close modal">
+          Close by form submit (without JS)
+        </button>
+      </form>
+    </dialog>
+
+    <dialog id="pop-up">
+      Pop-up window
+      <button class="close-btn">Close JS</button>
+      <form method="dialog">
+        <button>Close by form submit (without JS)</button>
+      </form>
+    </dialog>
+  </body>
+</html>
