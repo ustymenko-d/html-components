@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax on mousemove</title>
+    <link rel="stylesheet" href="../reset.css" />
+
+    <link rel="stylesheet" href="./parallax-onMouseMove.css" />
+    <script src="./parallax-onMouseMove.js" defer></script>
+  </head>
+  <body class="page">
+    <div class="parallax">
+      <div
+        class="parallax__layer parallax__background"
+        data-parallax-coef="40"
+      ></div>
+      <div
+        class="parallax__layer parallax__naruto parallax__naruto_child"
+        data-parallax-coef="3"
+        data-parallax-inverted="true"
+      ></div>
+      <div
+        class="parallax__layer parallax__naruto parallax__naruto_teen"
+        data-parallax-coef="5"
+      ></div>
+    </div>
+  </body>
+</html>

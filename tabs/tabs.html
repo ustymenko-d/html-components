@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <style>
+      .tabs__list {
+        display: flex;
+      }
+
+      .tabs__item {
+        flex: 1 1 33.33%;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #000;
+        background-color: transparent;
+        border: none;
+      }
+
+      .tabs__item_active {
+        background-color: coral;
+      }
+
+      .tabs__content-item {
+        padding: 15px;
+        background-color: coral;
+      }
+
+      .tabs__content-item.is-hidden {
+        display: none;
+      }
+    </style>
+
+    <script src="./tabs.js" defer></script>
+  </head>
+
+  <body>
+    <div class="tabs">
+      <div class="tabs__list" role="tablist">
+        <button
+          id="tab-1"
+          class="tabs__item"
+          role="tab"
+          aria-selected="true"
+          aria-controls="tabpanel-1">
+          first tab
+        </button>
+        <button
+          id="tab-2"
+          class="tabs__item"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tabpanel-2"
+          tabindex="-1">
+          second tab
+        </button>
+        <button
+          id="tab-3"
+          class="tabs__item"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tabpanel-3"
+          tabindex="-1">
+          third wery looong tab
+        </button>
+      </div>
+      <div class="tabs__content">
+        <div
+          id="tabpanel-1"
+          class="tabs__content-item"
+          role="tabpanel"
+          aria-labelledby="tab-1">
+          <a href="#">Some link</a>
+          First. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+          eligendi nemo distinctio consequuntur qui quisquam amet veritatis, rem
+          provident accusantium expedita perferendis pariatur nulla fuga dicta
+          laboriosam mollitia nihil veniam? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Voluptatibus dolorem maxime assumenda
+          quae, ducimus quasi, repellendus non quidem suscipit earum nulla nihil
+          laudantium delectus fugiat doloribus sed vel esse debitis repudiandae
+          nesciunt molestiae minus eos. Numquam quod cupiditate quos architecto
+          necessitatibus magnam consectetur autem? Deserunt culpa beatae dicta
+          repudiandae repellendus!
+        </div>
+        <div
+          id="tabpanel-2"
+          class="tabs__content-item"
+          role="tabpanel"
+          aria-labelledby="tab-2">
+          <a href="#">Some link</a>
+          Second. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+          eligendi nemo distinctio consequuntur qui quisquam amet veritatis, rem
+          provident accusantium expedita perferendis pariatur nulla fuga dicta
+          laboriosam mollitia nihil veniam? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Voluptatibus dolorem maxime assumenda
+          quae, ducimus quasi, repellendus non quidem suscipit earum nulla nihil
+          laudantium delectus fugiat doloribus sed vel esse debitis repudiandae
+          nesciunt molestiae minus eos. Numquam quod cupiditate quos architecto
+          necessitatibus magnam consectetur autem? Deserunt culpa beatae dicta
+          repudiandae repellendus!
+        </div>
+        <div
+          id="tabpanel-3"
+          class="tabs__content-item"
+          role="tabpanel"
+          aria-labelledby="tab-3">
+          <a href="#">Some link</a>
+          Third. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+          eligendi nemo distinctio consequuntur qui quisquam amet veritatis, rem
+          provident accusantium expedita perferendis pariatur nulla fuga dicta
+          laboriosam mollitia nihil veniam? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Voluptatibus dolorem maxime assumenda
+          quae, ducimus quasi, repellendus non quidem suscipit earum nulla nihil
+          laudantium delectus fugiat doloribus sed vel esse debitis repudiandae
+          nesciunt molestiae minus eos. Numquam quod cupiditate quos architecto
+          necessitatibus magnam consectetur autem? Deserunt culpa beatae dicta
+          repudiandae repellendus!
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

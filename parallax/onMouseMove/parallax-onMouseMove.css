@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+}
+
+.page {
+  padding: 2rem;
+}
+
+.parallax {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border: 1px solid;
+}
+.parallax__layer {
+  position: absolute;
+}
+
+.parallax__background {
+  background: url("./konohagakure.jpg") top / cover no-repeat;
+
+  inset: -5%;
+  width: 110%;
+  height: 110%;
+}
+
+.parallax__naruto {
+  width: 25%;
+}
+.parallax__naruto_child {
+  background: url("./naruto-child.png") no-repeat;
+  background-size: contain;
+  height: 25%;
+  top: 35%;
+  left: 15%;
+}
+
+.parallax__naruto_teen {
+  background: url("./naruto-teen.png") no-repeat;
+  background-size: contain;
+  height: 45%;
+  top: 20%;
+  right: 15%;
+}

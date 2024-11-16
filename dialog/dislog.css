@@ -1,0 +1,49 @@
+body {
+  height: 200vh;
+}
+body:has(#modal[open]) {
+  overflow: hidden;
+}
+#modal {
+  width: 50%;
+  height: 500px;
+}
+
+/* Backdrop style */
+#modal[open]::backdrop {
+  background: linear-gradient(
+    45deg,
+    rgba(146, 228, 111, 0.6) 0%,
+    rgba(72, 108, 191, 0.6) 50%,
+    rgba(177, 48, 169, 0.6) 100%
+  );
+
+  backdrop-filter: blur(2px);
+}
+
+/* Animation */
+#modal[open] {
+  animation: show 0.4s;
+}
+
+#modal.hide {
+  animation: hide 0.4s;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes hide {
+  to {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+}

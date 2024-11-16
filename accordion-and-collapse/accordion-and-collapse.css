@@ -1,0 +1,45 @@
+.accordion-item {
+  margin-bottom: 15px;
+}
+
+.accordion-item__active .accordion-item__trigger {
+  background-color: lightblue;
+}
+
+.accordion-item__active .accordion-item__content {
+  background-color: yellow;
+}
+
+.accordion-item__trigger {
+  padding: 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: transparent;
+  width: 100%;
+}
+
+.accordion-item__content {
+  border: 1px solid black;
+  border-top: none;
+}
+
+.collapsible {
+  visibility: visible;
+  pointer-events: all;
+  margin: 0;
+  padding: 20px;
+  max-height: 100rem;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition: all 0.5s;
+}
+
+.collapsible_collapsed {
+  visibility: hidden;
+  pointer-events: none;
+  height: 0;
+  max-height: 0;
+  padding: 0 20px;
+  margin: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}

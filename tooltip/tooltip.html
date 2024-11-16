@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip</title>
+
+    <link rel="stylesheet" href="./tooltip.css" />
+
+    <script src="./tooltip.js" defer></script>
+  </head>
+  <body>
+    <div class="label">
+      <span
+        class="label__tooltip-i tooltip-toggle"
+        data-tooltip-text="Sample text for your tooltip!"
+        tabindex="0"
+      >
+        i
+      </span>
+      <span class="label__text">Hover/click to top tooltip!</span>
+    </div>
+
+    <div class="label pass">
+      <label class="pass__label">
+        Password:
+        <input
+          class="test"
+          aria-describedby="passwordrules"
+          id="password"
+          type="password"
+        />
+      </label>
+      <div
+        class="pass__tooltip pass__tooltip_hidden"
+        role="tooltip"
+        id="passwordrules"
+        aria-hidden="true"
+      >
+        <ul title="Password Rules:">
+          <li>Minimum of 8 characters</li>
+          <li>
+            Include at least one lowercase letter, one uppercase letter, one
+            number and one special character
+          </li>
+          <li>Unique to this website</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
