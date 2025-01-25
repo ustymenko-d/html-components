@@ -6,7 +6,6 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>Accordion</title>
-
 		<style>
 			details > summary {
 				list-style: none;
@@ -29,14 +28,13 @@
 	</head>
 	<body>
 		<div class="accordion">
-			<details
-				class="accordion__details"
-				name="faq">
+			<details class="accordion__details">
 				<summary class="accordion__summary">
 					<span
 						class="accordion__title"
 						role="term"
-						aria-details="answer1">
+						id="question1"
+						aria-describedby="answer1">
 						First Question
 					</span>
 				</summary>
@@ -55,13 +53,13 @@
 			</div>
 
 			<details
-				class="accordion__details"
-				name="faq">
+				class="accordion__details">
 				<summary class="accordion__summary">
 					<span
 						class="accordion__title"
 						role="term"
-						aria-details="answer2">
+						id="question2"
+						aria-describedby="answer2">
 						Second Question
 					</span>
 				</summary>
